@@ -31,5 +31,34 @@ void mergesort(int low, int high) { // Step 1
     mergesort(low, mid); // Step 3.a
     mergesort(mid + 1, high); // Step 3.b
 
+    // Step 4
+    int i = low; // Step 4.a
+    int j = mid + 1; // Step 4.b
+    int k = low; // Step 4.c
+
+    while (i <= mid && j <= high) { 
+        if (arr[i] < arr[j]) { 
+            B[k] = arr[i]; 
+            i++; 
+        } else { 
+            B[k] = arr[j]; 
+            j++; 
+        } 
+        k++; 
+    }
+
+    while (j <= high) { // Step 4.e
+        B[k] = arr[j]; 
+        j++; 
+        k++; 
+    }
+
+    while (i <= mid) { // Step 4.f
+        B[k] = arr[i]; 
+        i++; 
+        k++; 
+    }
+
     
+    return 0;
 }
