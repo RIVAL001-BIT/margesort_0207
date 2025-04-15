@@ -63,7 +63,12 @@ for (int x = low; x <= high; x++) {
     arr[x] = B[x]; // Step 5.a
 }
 
-
+int main() {
+    input();  // Input the array
+    mergesort(0, n - 1);  // Call merge sort on the whole array
+    
+    
+    
 }
 
 
